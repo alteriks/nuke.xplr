@@ -162,7 +162,7 @@ end
 local function exec_custom(command, node)
 	command = command:gsub("{}", '"' .. node.absolute_path .. '"')
 
-	return {{ BashExec = command }}
+	return {{ BashExec = command .. " &" }}
 end
 
 
